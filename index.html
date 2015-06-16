@@ -1,0 +1,167 @@
+<div class="contents">
+
+<div class="textblock"><h1><a class="anchor" id="pie_noon_index"></a>
+
+Pie Noon    </h1>
+
+<p><a class="el" href="index.html#pie_noon_index">Pie Noon</a> is a simple multiplayer party game where you can throw pies at your friends. It is written in cross-platform C++.</p>
+
+ 
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/p1F6HRFnLoo?rel=0" frameborder="0" allowfullscreen="">
+
+</iframe>
+
+<h2>Motivation</h2>
+
+<p><a class="el" href="index.html#pie_noon_index">Pie Noon</a> demonstrates a quick and fun party game for the living room via support for the <a href="http://www.google.com/nexus/player/">Nexus Player</a>, an <a href="http://www.android.com/tv/">Android TV</a> device. The game shows how to use several open source technology components developed by Google. </p>
+
+<table style="border: 0; padding: 3em">
+
+<tbody><tr>
+
+<td><div class="image">
+
+<img src="info_panel_google_play_games.png" style="height: 20em">
+
+</div>
+
+ <a href="https://developer.android.com/google/play-services/games.html">Google Play Games Services</a> is used to share scores and reward players with achievements.   </td></tr>
+
+<tr>
+
+<td><div class="image">
+
+<img src="info_panel_webp_textures.png" style="height: 20em">
+
+</div>
+
+ <a href="https://developers.google.com/speed/webp">WebP</a>, an image compression technology, is used to compress textures which reduces the size of the final game package and ultimately reduces download time.   </td></tr>
+
+<tr>
+
+<td><div class="image">
+
+<img src="info_panel_data_driven_flatbuffers.png" style="height: 20em">
+
+</div>
+
+ <a href="http://google-opensource.blogspot.ca/2014/06/flatbuffers-memory-efficient.html">FlatBuffers</a>, a fast serialization system is used to store the game's data. The game configuration data is stored in <a href="http://www.json.org/">JSON</a> files which are converted to FlatBuffer binary files using the flatc compiler.   </td></tr>
+
+<tr>
+
+<td><div class="image">
+
+<img src="info_panel_procedural_animation_mathfu.png" style="height: 20em">
+
+</div>
+
+ <a href="http://googledevelopers.blogspot.ca/2014/11/geometry-math-library-for-c-game.html">MathFu</a>, a geometry math library optimized for <a href="http://en.wikipedia.org/wiki/ARM_architecture">ARM</a> and <a href="http://en.wikipedia.org/wiki/X86">x86</a> processors. The game uses <a href="http://googledevelopers.blogspot.ca/2014/11/geometry-math-library-for-c-game.html">MathFu</a> data types for two and three dimensional vectors, and for the 4x4 matrices used by the rendering system, and also by the <a href="http://google.github.io/motive/">Motive</a> animation system.   </td></tr>
+
+<tr>
+
+<td><div class="image">
+
+<img src="info_panel_multiple_control_schemes.png" style="height: 20em">
+
+</div>
+
+ The game uses an input device abstraction which enables it to work effectively with multiple control schemes including touch for <a href="http://www.android.com">Android</a>, joypads on <a href="http://www.android.com/tv/">Android TV</a> and keyboards on desktop platforms.   </td></tr>
+
+<tr>
+
+<td><div class="image">
+
+<img src="info_panel_normal_mapping.png" style="height: 20em">
+
+</div>
+
+ The Renderer is used conjunction with a normal mapping shader to provide cardboard rendering.   </td></tr>
+
+</tbody></table>
+
+<p>In addition, <a href="http://android-developers.blogspot.ca/2014/11/utilities-for-cc-android-developers.html">fplutil</a> is used to build, deploy, and run the game, build and archive the game, and profile the game's CPU performance.</p>
+
+<h2>Functionality</h2>
+
+<p><a class="el" href="index.html#pie_noon_index">Pie Noon</a> is a cross-platform, open-source game that supports,</p>
+
+<ul>
+
+<li>up to 4 players using Bluetooth controllers,</li>
+
+<li>touch controls,</li>
+
+<li>Google Play Games Services sign-in and leaderboards,</li>
+
+<li>other Android devices<ul>
+
+<li>you can play on your phone or tablet in single-player mode,</li>
+
+<li>or against human adversaries using Bluetooth controllers.</li>
+
+<li>or in multi-screen mode with an Android TV and 1-4 Android phones/tablets (<em>new in v1.1!</em>)</li>
+
+<li>or in a virtual reality mode with a Google Cardboard device (<em>new in v1.2!</em>)</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+<h2>Supported Platforms</h2>
+
+<p><a class="el" href="index.html#pie_noon_index">Pie Noon</a> has been tested on the following platforms:</p>
+
+<ul>
+
+<li><a href="http://www.google.com/nexus/player/">Nexus Player</a>, an <a href="http://www.android.com/tv/">Android TV</a> device</li>
+
+<li><a href="http://www.android.com">Android</a> phones and tablets</li>
+
+<li><a href="http://en.m.wikipedia.org/wiki/Linux">Linux</a> (x86_64)</li>
+
+<li><a href="http://www.apple.com/osx/">OS X</a></li>
+
+<li><a href="http://windows.microsoft.com/">Windows</a></li>
+
+</ul>
+
+<p>We use <a href="https://www.libsdl.org/">SDL</a> as our cross platform layer. The game is written entirely in C++, with the exception of one Java file used only on Android builds. The game can be compiled using <a href="http://en.m.wikipedia.org/wiki/Linux">Linux</a>, <a href="http://www.apple.com/osx/">OS X</a> or <a href="http://windows.microsoft.com/">Windows</a>.</p>
+
+<h2>Download</h2>
+
+<p><a class="el" href="index.html#pie_noon_index">Pie Noon</a> can be downloaded from:</p>
+
+<ul>
+
+<li><a href="http://github.com/google/pienoon">GitHub</a> (source)</li>
+
+<li><a href="http://github.com/google/pienoon/releases">GitHub Releases Page</a> (source)</li>
+
+<li><a href="http://play.google.com/store/apps/details?id=com.google.fpl.pie_noon">Google Play</a> (binary for Android)</li>
+
+</ul>
+
+<p><b>Important</b>: Pie Noon uses submodules to reference other components it depends upon, so download the source from <a href="http://github.com/google/pienoon">GitHub</a> using:</p>
+
+<div class="fragment"><div class="line">git clone --recursive https:<span class="comment">//github.com/google/pienoon.git</span></div>
+
+</div><!-- fragment --><h2>Feedback and Reporting Bugs</h2>
+
+<ul>
+
+<li>Discuss Pie Noon with other developers and users on the <a href="http://group.google.com/group/pienoon">Pie Noon Google Group</a>.</li>
+
+<li>File issues on the <a href="http://github.com/google/pienoon/issues">Pie Noon Issues Tracker</a>.</li>
+
+<li>Post your questions to <a href="http://www.stackoverflow.com">stackoverflow.com</a> with a mention of <b>pienoon</b>.</li>
+
+</ul>
+
+<p><br>
+
+ </p>
+
+</div></div>
